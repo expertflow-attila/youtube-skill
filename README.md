@@ -1,44 +1,61 @@
 # youtube-skill
 
-Prémium **Claude Code skill** YouTube videók készítéséhez. Egy nyers ötletből,
-oktatóanyagból vagy személyes történetből segít kész **címet, hookot,
-forgatókönyvet és videóleírást** formálni — úgy, hogy a néző a te történeteden
-keresztül **saját magára ismerjen**, és végignézze a videót.
+Prémium **Claude Code skill** magyar YouTube- és oktatóvideók készítéséhez. Egy
+nyers ötletből, oktatóanyagból, személyes felismerésből vagy ügyfélhelyzetből
+kész **diagnózist, 25 címet, 8 hookot, teljes videóvázat, retenciós tervet,
+tükörmondatokat és teleprompter-vázlatot** ad — úgy, hogy a néző a te
+történeteden keresztül **saját magára ismerjen**.
 
-A skill az alábbi alapelvre épül:
+A skill alapelve:
 
-> **Az embereket nem a te történeted érdekli. Az érdekli őket, hogy a
-> történetedben felismerik-e saját magukat.**
+> **Nem a saját történetemről beszélek. A néző problémájáról beszélek a saját
+> történetemen keresztül.** A néző azt érezze: *„Ez nem róla szól. Ez rólam szól."*
+
+## A skill neve
+
+**`youtube-figyelem-atalakito`** (v3.0.0)
 
 ## Mit tud?
 
-Amikor előhívod és odaadsz neki egy ötletet, végigvezet ezeken:
+Nem csak a Tükör-technikát használja — **teljes technikai rendszert** (45
+technika) alkalmaz a címre, a nyitásra, a középrészre, a rehookokra, a zárásra
+és a konkrét nyelvi átírásra. Amikor odaadsz neki egy ötletet, mindig egy
+kötelező, 17 szekciós csomagot ad vissza, többek között:
 
-1. **Az emberi minta** megtalálása — felszíni téma vs. valódi téma (félelem,
-   identitás, önbecsapás, bátorság).
-2. **Videó típusa** — Builder (tutorial → megoldás) vagy Thinker (probléma →
-   felismerés).
-3. **6–8 címjavaslat** a tabloid-technikával (konfliktus, tét, kíváncsiság).
-4. **2–3 hook-változat** különböző technikákkal (nem mindig kérdéssel!).
-5. **Forgatókönyv-váz** az Én→Te→Mi ritmussal, rehookokkal, nyitott hurkokkal.
-6. **Videóleírás**, ami nem összefoglal, hanem folytatja a beszélgetést.
+1. **Rövid diagnózis** — felszíni téma, valódi konfliktus, kimondatlan érzés, rejtett minta, tét.
+2. **A videó valódi témája** — felszíntől a mélyebb emberi igazságig.
+3. **Kötelező átírási táblázat** — hogyan lesz a „rólam" mondatból „róla" mondat (min. 8 sor).
+4. **5 központi kérdés** + a javasolt.
+5. **25 cím** öt csoportban (tabloid, paradoxon, kérdéses, személyes-univerzális, kellemetlen igazság).
+6. **A legjobb 1–3 cím** indoklással.
+7. **8 hook** különböző technikákkal (sosem „Ebben a videóban…").
+8. **Attila-féle videóváz** 8–11 résszel, technikákkal és Ő/Én/Mi ritmussal.
+9. **Retenciós terv** másodperc-bontásban.
+10. **20+ rehook / visszadobás mondat** a konkrét témára.
+11. **15 tükörmondat** a nézői önfelismeréshez.
+12. **12 nyelvi formula** (Talán… / Lehet, hogy… / Mi van, ha… / Azt hittem…, de…).
+13. **Oktatói tanulságok** (ha oktató a videó).
+14. **5 zárás** különböző stílusban.
+15. **Rövid teleprompter-vázlat**.
+16. **Technikák térképe** — melyik technika hol dolgozik.
+17. **Ajánlott végső csomag** — főcím + első 30 mp + szerkezet 5 pontban.
 
-A benne lévő összes technika (Tükör-technika, paradoxon, rehook, nyitott hurok,
-kontraszt, PAS/BAB/AIDA, mélységi szintek, tabloid címadás stb.) a
-`.claude/skills/youtube-storyteller/` mappában van katalogizálva.
+A teljes rendszer a `.claude/skills/youtube-figyelem-atalakito/SKILL.md`-ben van;
+kiegészítő technika-katalógusok és egy forgatókönyv-sablon a `references/` és
+`assets/` mappákban.
 
 ## Hogyan hívd elő?
 
-A skill neve: **`youtube-storyteller`**.
-
-- Írd be a Claude Code-ban: `/youtube-storyteller`, majd add meg az ötletet, **vagy**
-- egyszerűen mondd el az ötleted, és kérd, hogy a YouTube-skilllel dolgozzon rajta
+- Írd be a Claude Code-ban: `/youtube-figyelem-atalakito`, majd add meg az ötletet, **vagy**
+- egyszerűen mondd el az ötleted, és kérd, hogy a YouTube-skillel dolgozzon rajta
   (a Claude a leírás alapján magától is előhívja).
 
 Példák:
-- „Van egy ötletem egy videóhoz arról, hogy elvesztem az AI-ban — segíts a
-  youtube-storyteller skillel."
-- „Csinálj címet és hookot ehhez az oktatóvideóhoz: n8n automatizáció kezdőknek."
+- „Van egy videóötletem arról, hogy elvesztem az AI-ban — futtasd rá a youtube-figyelem-atalakito skillt."
+- „Csinálj címeket, hookot és videóvázat ehhez: el kell mondanom egy ügyfélnek, hogy rossz irányba vittem egy projektet."
+
+A bemenet lehet töredékes vagy beszélt nyelvű — a skill ésszerű feltételezéseket
+tesz (és jelöli őket), ha hiányzik valami.
 
 ## Telepítés / elérés
 
@@ -51,31 +68,31 @@ Klónozd a repót, és dolgozz benne — a project-skill automatikusan betöltő
 ```bash
 git clone <repo-url> youtube-skill
 cd youtube-skill
-claude        # a youtube-storyteller skill elérhető
+claude        # a youtube-figyelem-atalakito skill elérhető
 ```
 
 ### Asztali gépen — B opció (globálisan, minden projektben)
-Másold (vagy linkeld) a skill mappáját a személyes skilljeid közé, így bármelyik
-projektben előhívható:
+Másold (vagy linkeld) a skill mappáját a személyes skilljeid közé:
 ```bash
 # másolás
-cp -r .claude/skills/youtube-storyteller ~/.claude/skills/
+cp -r .claude/skills/youtube-figyelem-atalakito ~/.claude/skills/
 
 # VAGY symlink (így a git pull frissíti)
-ln -s "$(pwd)/.claude/skills/youtube-storyteller" ~/.claude/skills/youtube-storyteller
+ln -s "$(pwd)/.claude/skills/youtube-figyelem-atalakito" ~/.claude/skills/youtube-figyelem-atalakito
 ```
 
 ## Felépítés
 
 ```
-.claude/skills/youtube-storyteller/
-├── SKILL.md                      # vezérlő: alapelv, munkafolyamat, checklist
-├── references/
-│   ├── hook-technikak.md         # 9 nyitási technika
-│   ├── nyelvi-fogasok.md         # „mit mondjak helyette" — Rossz→Jobb átírások
-│   ├── figyelemfenntartas.md     # Én→Te→Mi ritmus, rehook, nyitott hurok, kontraszt
-│   ├── cim-es-leiras.md          # tabloid címadás + videóleírás-minta
-│   ├── vazak.md                  # PAS/BAB/AIDA, univerzális váz, Builder vs Thinker
+.claude/skills/youtube-figyelem-atalakito/
+├── SKILL.md                      # a teljes rendszer: alapelv, munkamenet, 45 technika,
+│                                 # Attila-féle videóváz, 17 szekciós kimeneti struktúra
+├── references/                   # kiegészítő, kompatibilis technika-katalógusok
+│   ├── hook-technikak.md
+│   ├── nyelvi-fogasok.md
+│   ├── figyelemfenntartas.md
+│   ├── cim-es-leiras.md
+│   ├── vazak.md                  # extra keretrendszerek: PAS / BAB / AIDA, Builder vs Thinker
 │   └── peldak.md                 # teljesen kidolgozott példák
 └── assets/
     └── forgatokonyv-sablon.md    # kitölthető forgatókönyv-sablon
@@ -83,6 +100,6 @@ ln -s "$(pwd)/.claude/skills/youtube-storyteller" ~/.claude/skills/youtube-story
 
 ## Frissítés
 
-A technikák bővítéséhez szerkeszd a `references/` fájlokat, és commitold.
-Felhőben a következő session már a frissített változatot használja; asztali
-symlink esetén egy `git pull` elég.
+A technikák bővítéséhez/finomításához szerkeszd a `SKILL.md`-t vagy a
+`references/` fájlokat, és commitold. Felhőben a következő session már a
+frissített változatot használja; asztali symlink esetén egy `git pull` elég.
